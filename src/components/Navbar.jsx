@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const navItems = (
@@ -7,7 +8,7 @@ function Navbar() {
         <a>Live Scores</a>
       </li>
       <li>
-        <a>Schedule</a>
+        <Link to="/cricket-schedule">Schedule</Link>
       </li>
       <li>
         <a>Archives</a>
@@ -45,7 +46,7 @@ function Navbar() {
   return (
     <div>
       <div className="navbar bg-base-300">
-        <div className="navbar-start md:ms-16">
+        <div className="navbar-start md:ms-20">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -70,12 +71,14 @@ function Navbar() {
               {navItems}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link to="/" className="btn btn-ghost text-xl">
+            Fast Cricket
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navItems}</ul>
         </div>
-        <div className="navbar-end md:mr-16">
+        <div className="navbar-end md:mr-20">
           <button className="btn btn-ghost btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
